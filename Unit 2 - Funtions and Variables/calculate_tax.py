@@ -1,6 +1,6 @@
 def calculate_tax():
-    print("Name of item " + name)
-    print("Price of item and tax is " + tax)
+    print("Name of item is " + name)
+    print("Price of item and tax added is " + tax)
 
 
 
