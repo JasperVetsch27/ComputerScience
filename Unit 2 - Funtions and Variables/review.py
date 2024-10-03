@@ -53,7 +53,7 @@ bool()
 #Fucntions are a lot like variables 
 #They have names
 #They can be recalled from memory by calling their name
-#Sore informtaion 
+#Store informtaion 
 #Variables store values, functions store code 
 def potato():   #Def keyword + name + () + :
     print("potato") #Lines indented underneath are "inside" the funtion 
