@@ -68,11 +68,14 @@ def Talk_With_Man():
     choice_4 = input("> ")  # Fourth choice in the story 
 
     if choice_4 == "1":
-        Bond_With_Man + 1
+        Bond_With_Man + 1   # Building bond with Man 
         Monster_Encounter()
 
     elif choice_4 == "2":
         Monster_Encounter()
+    
+    else:
+        Talk_With_Man()
 
 def Monster_Encounter():
     print("You have no more time to talk becuase a monster bursts through the door you just came through a moment ago")
@@ -80,10 +83,10 @@ def Monster_Encounter():
     print("1. You see a metal pipe on the gound and think to wack the monster with it")
     print("2. You follow the old mans direction to run")
 
-    choice_5 = input("> ")
+    choice_5 = input("> ")  # Fifth choice in the story
 
     if choice_5 == "1":
-        Bond_With_Man + 1
+        Bond_With_Man + 1   # Maximized bond with Joe, he now would fully trust you
         Through_The_Door()
 
     elif choice_5 == "2":
@@ -93,8 +96,127 @@ def Monster_Encounter():
         Monster_Encounter()
 
 def Through_The_Door():
-    print("After either running or hitting the monster you go to the end of the hallways becuase")
+    print("After either running or hitting the monster you go to the end of the hallway becuase")
     print("more monsters are crashing through the door")
+    print("1. Go through the door at the end of the hallway")
+    print("2. Hide in a side room")
+
+    choice_6 = input("> ")  # Sixth Choice in story 
+
+    if choice_6 == "1":
+        Hallway_Door()
+
+    elif choice_6 == "2":
+        Side_Room()
+
+    else:
+        Through_The_Door
+    
+def Hallway_Door():
+    print("You and Joe both go through the door at the end of the hallway")
+    print("1. Lock the door with the built in lock on the door")
+    print("2. Put a metal pipe through the door handle to secure it")
+
+    choice_7 = input("> ")  # Choice seven 
+
+    if choice_7 == "1":
+        print("The monsters are able to get through the door becuase it is not secure enough")
+        print("You and the man are attacked by the beasts and are never heard from again")
+        print("Game Over")  # Third ending in the game
+
+    elif choice_7 == "2":
+        Exit_Sign()
+    
+    else:
+        Hallway_Door()
+
+def Exit_Sign():
+    print("You are sure the door will hold the monsters back and now you want to find an exit to this place")
+    print("There is a divided path that go in two different directions, you guys decide to split up to find an exit")
+    print("1. You go left and Joe goes to the right")
+    print("2. You both decide to go to the right thinking you guys are safer together")
+
+    choice_8 = input("> ")  # Eigth choice
+
+    if choice_8 == "1":
+        Left_Pathway()
+
+    elif choice_8 == "2":
+        Right_Pathway()
+    
+    else:
+        Exit_Sign
+
+def Left_Pathway():
+    print("As you walk through the dark corridor you hear a creepy sound a bit further down")
+    print("1. Continue down the hallway")
+    print("2. Walk back to the divided path and go right to meet up with Joe")
+
+    choice_9 = input("> ")  # Ninth Choice
+
+    if choice_9 == "1":
+        Fake_Exit()
+
+    elif choice_9 == "2":
+        Right_Pathway()
+    
+    else:
+        Left_Pathway()
+
+def Fake_Exit():
+    print("As you contiue to walk down the hallway the noise grows louder but with curoisty you continue")
+    print("You see a door with an Exit sign above it at the end but you still hear the weird sound")
+    print("You are sure that the noise is coming from behind the door, but it says exit on it, so its safe right")
+    print("1. Go through the door anyways even though you are skeptical of it")
+    print("2. Turn back and go with Joe on the other path not trusting this door")
+
+    choice_10 = input("> ") # Tenth choice in the story
+
+    if choice_10 == "1":
+        print("Turns out there was a monster lurking behind the door trying to catch people who are unsuspecting")
+        print("You are caught off guard and before you can even think the monster grabs you and drags you into the room behind the fake exit sign door")
+        print("Game Over")  # Fourth Ending
+
+    elif choice_10 == "2":
+        Right_Pathway()
+
+    else:
+        Fake_Exit()
+
+def Right_Pathway():
+    print("As you both walk together down the right pathway you come across a door with an exit sign above it but chains are all over the door that need to be cut to open it")
+    print("Joe tells you to watch his back while he cuts the chains")
+    print("1. Watch Joes back")
+    print("2. Help him cut the chain on the door")
+
+    choice_11 = input("> ") # Eleventh Choice in the game
+
+    if choice_11 == "1":
+        Real_Exit()
+
+    elif choice_11 == "2":
+        print("As you both start to cut the chains a sneaky monster comes up behind you both knowing that neither of you know of his pressense")
+        print("The monster grabs you both and you guys are never able to escape the facility")
+        print("Game Over")
+
+    else:
+        Right_Pathway()
+
+def Real_Exit():
+    print("As Joe is able to get the last chain off the door he goes through the door")
+
+    if Bond_With_Man == 2:  # Only happens if you have built a bond with Joe throughout the game
+        print("Joe tells you that he has opened the door and you go out the door with him")
+        print("You both escape the facility and live long fulfilling lives")
+        print("Game over")  # Fifth Ending 
+
+    elif Bond_With_Man < 2:
+        print("Joe doesn't tell you that he has opened the door becuase he doesn't like you enough")
+        print("He locks the door behind him and leaves you in the facility all alone")
+        print("You are trapped in the facility forever and are never heard from again")
+        print("Game Over")  #Sixth Ending 
+
+
 
 
 def Inside_Safe_Door():
