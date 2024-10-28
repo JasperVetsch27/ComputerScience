@@ -325,12 +325,115 @@ def Monster_Talk():
         Solution()
     
     elif choice_16 == "2":
-        print("George tells you that when the outbreak happened he used some ")
+        print("George tells you that when the outbreak first started he had a gas mask on becuase of an experiment he was conducting, the mask protected most")
+        print("of his brain function but it still mutated his body")
         
-
+        Solution()
+        
+    else:
+        Monster_Talk()
     
 def Solution():
-    print("George explains that there is an experimental gas that he has been working on")
+    print("George explains however that there is an experimental gas that he was working on that should cure people's brains of the virus and bring them back to normal")
+    print("He says that it is in his office but Doctor Ross, the leader of the mutants, is also trying to look for it")
+    print("1. Say that we should straight to George's office to get the cure")
+    print("2. Tell him that we should look for Ross so we can cut off his conection to the other monsters so he can't control them anymore")
+
+    choice_17 = input("> ") # Seventeenth Choice in the story 
+
+    if choice_17 == "1":
+        George_Office()
+
+    elif choice_17 == "2":
+        Search_For_Ross()
+
+    else:
+        Solution()
+
+def George_Office():
+    print("When you get there George says the the cure is locked in a room but that only one of us can enter at a time")
+    print("1. You offer to go inside the room")
+    print("2. You tell him to go inside and retrieve the cure")
+
+    choice_18 = input("> ") # Eighteenth Choice in the story 
+
+    if choice_18 == "1":
+        print("You go inside the room and the door behind you locks you inside")
+        print("You get the canister and put it in a machine that spreads the gas across the building")
+        print("The gas cures everybody including George but you are stuck inside the room forever and slowly die")
+        print("Game Over")  # Ninth Ending 
 
 
+    elif choice_18 == "2":
+        print("George goes inside and gets the gas canister")
+        print("He goes over to a machine and puts the canister inside, the gas is than released out into the facility")
+        print("All the monsters are cured now and back to normal but since George is still in the room he is not cured")
+        print("Game Over")  # Tenth Ending
+
+    else:
+        George_Office()
+
+Evil_Intentions = 0 # Your willingness to do evil things 
+
+def Search_For_Ross(): 
+    print("George tells you that he is most likely in his office looking over the cameras in the facility")
+    print("You guys go there and find him sitting in his chair turned around")
+    print("You and George jump Ross and knock him out")
+    print("1. Take a key on Ross's neck that is important")
+    print("2. Leave the key on his neck for George to take")
+
+    choice_19 = input("> ") # Ninteenth Choice
+
+    if choice_19 == "1":        
+        if Monster_Bond == 1:   # Bond with george will affect how he will react when you take the key
+            global Evil_Intentions
+            Evil_Intentions = Evil_Intentions + 1
+            print("You find a machine key around Ross's neck and take it")
+
+            Ross_Fate()
+
+        elif Monster_Bond == 0: 
+            print("George notice that you took the key and takes it back not trusting you with it")
+
+            Ross_Fate()
+
+
+    elif choice_19 == "2":
+        print("George takes a machine key that was wrapped aroud Ross's neck and puts it in his pocket")
+
+        Ross_Fate()
+
+    else:
+        Search_For_Ross()
+
+def Ross_Fate():
+    global Evil_Intentions
+    print("1. You guys decide to leave Ross there for police to find after everybody is cured")
+    print("2. You decide that Ross should be punished for what he has done to everybody")
+
+    choice_20 = input("> ") # Tweenteith Choice 
+
+    if choice_20 == "1":
+        print("You leave him in the office and head toward Georges office")
+        Final_Scene()
+
+    elif choice_20 == "2":
+        Evil_Intentions = Evil_Intentions + 1
+        print("You sufficate Ross and leave his body in the office and head toward Georges office")
+
+        Final_Scene()
+
+def Final_Scene():
+    if Evil_Intentions == 2:
+        print("Once you get your hand on the canister you take the key you found on Ross and insert it in the canister")
+        print("This mutates the gas and makes it so the monsters will all obey you")
+        print("You release the gas on the building and become the new leader of the monsters and take over the world")
+        print("Game Over") # Eleventh ending
+
+    elif Evil_Intentions < 2:
+        print("You and goerge get the canister and spread the gas all over the facility")
+        print("Everyone is cured of the sickness including George and every lives happy lives")
+        print("Game Over")  # Tweelth Ending 
+
+    
 Start_Adventure()
