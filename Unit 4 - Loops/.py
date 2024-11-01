@@ -1,12 +1,24 @@
-TopFiveMovies = []
+TopFiveFoods = []
 
-First_Favorite = input("First favorite movie\n>")
+First_Favorite = input("First favorite food\n>")
 
-TopFiveMovies.append(First_Favorite)
+TopFiveFoods.append(First_Favorite)
 
-Second_Favorite = input("Second favorite movie\n>")
+Second_Favorite = input("Second favorite food\n>")
 
-TopFiveMovies.append(Second_Favorite)
+TopFiveFoods.append(Second_Favorite)
 
-Third_Favorite = input("Third favorite movie\n>")
+Third_Favorite = input("Third favorite food\n>")
+
+TopFiveFoods.append(Third_Favorite)
+
+Fourth_Favorite = input("Fourth favorite food\n>")
+
+TopFiveFoods.append(Fourth_Favorite)
+
+Fifth_Favorite = input("Fifth favorite food\n>")
+
+TopFiveFoods.append(Fifth_Favorite)
+
+print(TopFiveFoods)
 
