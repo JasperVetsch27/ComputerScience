@@ -39,8 +39,3 @@ print(List)
 # Create a list of five random number from 0-100
 # Use a for loops to find the sum of those numbers 
 
-import random
-Number_List = [random.radint(0, 100), random.radint(0, 100), random.radint(0, 100), random.radint(0, 100), random.radint(0, 100)]
-
-for Number in Number_List:
-    
