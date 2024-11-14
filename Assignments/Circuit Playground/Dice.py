@@ -1,7 +1,7 @@
 from adafruit_circuitplayground import cp
 import time
 import random
-debounce_time = 1
+debounce_time = .5
 
 while True:
     if cp.button_a:

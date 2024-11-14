@@ -1,3 +1,4 @@
+from adafruit_circuitplayground import cp
 import random
 
 
